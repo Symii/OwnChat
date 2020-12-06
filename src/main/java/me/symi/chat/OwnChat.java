@@ -6,7 +6,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 import java.util.HashMap;
 import java.util.Map;
 
-public class FabledChat extends JavaPlugin {
+public class OwnChat extends JavaPlugin {
 
     @Override
     public void onEnable()

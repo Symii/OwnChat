@@ -2,7 +2,7 @@
   <artifact type="jar" name="FabledChat:jar">
     <output-path>$PROJECT_DIR$/out/artifacts/FabledChat_jar</output-path>
     <root id="archive" name="FabledChat.jar">
-      <element id="module-output" name="FabledChat" />
+      <element id="module-output" name="OwnChat" />
     </root>
   </artifact>
 </component>
