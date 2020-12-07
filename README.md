@@ -1,7 +1,10 @@
 # OwnChat [1.8.X -1.16.X] [Color selector, GUI]
+
+Download: https://www.spigotmc.org/resources/ownchat-1-8-x-1-16-x-color-selector-gui.86502/
+
 <img src="https://www.spigotmc.org/attachments/features_for_fymi-png.575368/">
 
-OwnChat allows players to change the color of their chat to many different colors!
+<strong>OwnChat</strong> allows players to change the color of their chat to many different colors!
 
 <div style="display: flex;">
   <img src="https://proxy.spigotmc.org/1633cd8db02ba0e3f86f17daf7ab70837de43dd1?url=https%3A%2F%2Fowncraft.eu%2Ffiles%2Flanguage.gif">
@@ -12,11 +15,18 @@ OwnChat allows players to change the color of their chat to many different color
 
 <img src="https://www.spigotmc.org/attachments/commands-png.575365/">
 
-/cc - opens chat color selector GUI
+/cc - opens chat color selector GUI<br>
 Aliases: /chatcolor /color /ownchat /oc
 
-<img src="">
-<img src="">
+<img src="https://www.spigotmc.org/attachments/permissions-png.575369/">
+
+<b>ownchat.use</b> - Allows cc command<br>
+<b>ownchat.admin</b> - Permission for admins
+
+<img src="https://www.spigotmc.org/attachments/config_for_fymi_szymi-png.575366/">
+
+https://github.com/Symii/OwnChat/blob/master/src/main/resources/config.yml
+
 <img src="">
 <img src="">
 <img src="">
