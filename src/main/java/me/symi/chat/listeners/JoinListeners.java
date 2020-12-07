@@ -30,7 +30,8 @@ public class JoinListeners implements Listener {
 
         if(plugin.isUpdate_available() && player.hasPermission("ownchat.admin"))
         {
-            player.sendMessage(ChatUtil.fixColors("&f&lOwn&9&lChat &8» &eThere is a new update available. You can download it here &6spigotmc.org"));
+            player.sendMessage(ChatUtil.fixColors("&f&lOwn&9&lChat &8» &eThere is a new update available."));
+            player.sendMessage(ChatUtil.fixColors("&eYou can download it here &6https://www.spigotmc.org/resources/ownchat.86502/"));
         }
     }
 
@@ -38,7 +39,7 @@ public class JoinListeners implements Listener {
     public void onPlayerQuit(PlayerQuitEvent event)
     {
         final Player player = event.getPlayer();
-        OwnChat.getInstance().getPlayerDataManager().removePlayer(player.getName());
+        plugin.getPlayerDataManager().removePlayer(player.getName());
     }
 
 }

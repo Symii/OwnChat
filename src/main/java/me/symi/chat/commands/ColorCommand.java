@@ -32,12 +32,11 @@ public class ColorCommand implements CommandExecutor {
 
         if (player.hasPermission("ownchat.use")) {
             player.openInventory(ChatInventory.getInventory());
-            return true;
         } else {
             player.sendMessage(languageManager.getMessage(configManager.getLanguage(), "permission-message"));
         }
 
-        return false;
+        return true;
     }
 
 }

@@ -80,14 +80,14 @@ public class OwnChat extends JavaPlugin {
 
     private void setupMetrics()
     {
-        MetricsLite metrics = new MetricsLite(this, 9574);
+        new MetricsLite(this, 9574);
     }
 
     private void checkForUpdate()
     {
         Logger logger = this.getLogger();
 
-        new UpdateChecker(this, 12345).getVersion(version ->
+        new UpdateChecker(this, 86502).getVersion(version ->
         {
             if (this.getDescription().getVersion().equalsIgnoreCase(version))
             {
@@ -96,7 +96,8 @@ public class OwnChat extends JavaPlugin {
             }
             else
                 {
-                logger.warning("There is a new update available. You can download it here spigotmc.org");
+                logger.warning("There is a new update available.");
+                logger.warning("You can download it here https://www.spigotmc.org/resources/ownchat.86502/");
                 this.update_available = true;
             }
         });

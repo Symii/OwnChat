@@ -1,6 +1,6 @@
 name: OwnChat
 main: me.symi.chat.OwnChat
-version: 1.0
+version: 1.1
 description: This plugin allows players to change their chat message color
 api-version: 1.16
 author: Symi
@@ -8,7 +8,7 @@ website: https://github.com/Symii
 
 commands:
   color:
-    aliases: [kolory,kolor,chatcolor,cc]
+    aliases: [kolory,kolor,chatcolor,cc,oc,ownchat]
     usage: /<command>
     description: Use this command to change your chat message color
 

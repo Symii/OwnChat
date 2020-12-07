@@ -5,8 +5,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>me.symi</groupId>
-    <artifactId>FabledChat</artifactId>
-    <version>1.0</version>
+    <artifactId>OwnChat</artifactId>
+    <version>1.1</version>
     <build>
         <plugins>
             <plugin>
@@ -36,7 +36,12 @@
 
     <dependencies>
         <!--This adds the Spigot API artifact to the build -->
-
+        <dependency>
+            <groupId>org.spigotmc</groupId>
+            <artifactId>spigot-api</artifactId>
+            <version>1.16.1-R0.1-SNAPSHOT</version>
+            <scope>provided</scope>
+        </dependency>
         <dependency>
             <groupId>com.google.code.findbugs</groupId>
             <artifactId>jsr305</artifactId>
