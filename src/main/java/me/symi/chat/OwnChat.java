@@ -1,46 +1,140 @@
 package me.symi.chat;
 
-import me.symi.chat.metrics.Metrics;
+import me.symi.chat.commands.ColorCommand;
+import me.symi.chat.config.ConfigManager;
+import me.symi.chat.config.FileManager;
+import me.symi.chat.config.LanguageManager;
+import me.symi.chat.database.SQLite;
+import me.symi.chat.listeners.ChatListeners;
+import me.symi.chat.listeners.InventoryListeners;
+import me.symi.chat.listeners.JoinListeners;
+import me.symi.chat.metrics.MetricsLite;
+import me.symi.chat.playerdata.PlayerDataManager;
+import me.symi.chat.utils.UpdateChecker;
+import me.symi.chat.utils.VersionUtil;
+import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.logging.Logger;
 
 public class OwnChat extends JavaPlugin {
+
+    private static OwnChat INSTACNE;
+    private SQLite database;
+    private PlayerDataManager playerDataManager;
+    private FileManager fileManager;
+    private LanguageManager languageManager;
+    private ConfigManager configManager;
+    private boolean update_available = false;
+
+    @Override
+    public void onLoad()
+    {
+        INSTACNE = this;
+    }
 
     @Override
     public void onEnable()
     {
-        setupMetrics();
+        configManager = new ConfigManager(this);
+        database = new SQLite(this);
+        playerDataManager = new PlayerDataManager();
+        fileManager = new FileManager(this);
+        languageManager = new LanguageManager(this);
+        languageManager.loadMessages();
+
+        PluginManager pluginManager = getServer().getPluginManager();
+        pluginManager.registerEvents(new ChatListeners(this), this);
+        pluginManager.registerEvents(new JoinListeners(this), this);
+
+
+        if(VersionUtil.isAPIlevel1_13())
+        {
+            pluginManager.registerEvents(new InventoryListeners(this), this);
+            if(configManager.isMetrics_enabled())
+            {
+                setupMetrics();
+            }
+        }
+        else
+        {
+            pluginManager.registerEvents(new InventoryListeners(this), this);
+        }
+
+        if(configManager.isUpdate_check_enabled())
+        {
+            checkForUpdate();
+        }
+
+        this.getCommand("color").setExecutor(new ColorCommand(this));
+    }
+
+    @Override
+    public void onDisable()
+    {
+        if(playerDataManager != null)
+            playerDataManager.onDisable();
+        if(database != null)
+            database.onDisable();
     }
 
     private void setupMetrics()
     {
-        Metrics metrics = new Metrics(this, 9566);
-        metrics.addCustomChart(new Metrics.DrilldownPie("java_version", () ->
+        MetricsLite metrics = new MetricsLite(this, 9574);
+    }
+
+    private void checkForUpdate()
+    {
+        Logger logger = this.getLogger();
+
+        new UpdateChecker(this, 12345).getVersion(version ->
         {
-            Map<String, Map<String, Integer>> map = new HashMap<>();
-            String javaVersion = System.getProperty("java.version");
-            Map<String, Integer> entry = new HashMap<>();
-            entry.put(javaVersion, 1);
-            if (javaVersion.startsWith("1.7"))
+            if (this.getDescription().getVersion().equalsIgnoreCase(version))
             {
-                map.put("Java 1.7", entry);
-            }
-            else if (javaVersion.startsWith("1.8"))
-            {
-                map.put("Java 1.8", entry);
-            }
-            else if (javaVersion.startsWith("1.9"))
-            {
-                map.put("Java 1.9", entry);
+                logger.info("There is not a new update available.");
+                this.update_available = false;
             }
             else
-            {
-                map.put("Other", entry);
+                {
+                logger.warning("There is a new update available. You can download it here spigotmc.org");
+                this.update_available = true;
             }
-            return map;
-        }));
+        });
+    }
+
+    public static OwnChat getInstance()
+    {
+        return INSTACNE;
+    }
+
+    public SQLite getDatabase()
+    {
+        return database;
+    }
+
+    public PlayerDataManager getPlayerDataManager()
+    {
+        return playerDataManager;
+    }
+
+    public FileManager getFileManager()
+    {
+        return fileManager;
+    }
+
+    public LanguageManager getLanguageManager()
+    {
+        return languageManager;
+    }
+
+    public ConfigManager getConfigManager()
+    {
+        return configManager;
+    }
+
+    public boolean isUpdate_available()
+    {
+        return update_available;
     }
 
 }

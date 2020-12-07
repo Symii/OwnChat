@@ -1,0 +1,38 @@
+plugin-prefix: "&f&lOwn&9&lChat &8»"
+player-only-command: "%prefix% &eThis command can be only executed by players."
+permission-message: "%prefix% &ePurchase VIP+ rank on &6https://github.com/Symii"
+
+color-reset: "%prefix% &eYou have reseted your current color"
+color-choose: "%prefix% &7You have chosen a color "
+
+inventory-title: "&e&lChoose color"
+
+green-color-name: "&a&lGreen color"
+green-color-lore: "&6You will be writing in &2green color"
+
+blue-color-name: "&9&lBlue color"
+blue-color-lore: "&6You will be writing in &9blue color"
+
+cyan-color-name: "&b&lCyan color"
+cyan-color-lore: "&6You will be writing in &bcyan color"
+
+white-color-name: "&f&lWhite color"
+white-color-lore: "&6You will be writing in &fwhite color"
+
+yellow-color-name: "&e&lYellow color"
+yellow-color-lore: "&6You will be writing in &eyellow color"
+
+orange-color-name: "&6&lOrange color"
+orange-color-lore: "&6You will be writing in &6orange color"
+
+gray-color-name: "&8&lGray color"
+gray-color-lore: "&6You will be writing in &8gray color"
+
+purple-color-name: "&5&lPurple color"
+purple-color-lore: "&6You will be writing in &5purple color"
+
+light-gray-color-name: "&7&lLight gray color"
+light-gray-color-lore: "&6You will be writing in &7light gray color"
+
+reset-color-name: "&cReset colors"
+reset-color-lore: "&eClick to reset your chat colors"

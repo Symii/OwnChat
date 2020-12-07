@@ -1,0 +1,38 @@
+plugin-prefix: "&f&lOwn&9&lChat &8»"
+player-only-command: "%prefix% &eTa komenda może być używana tylko przez graczy."
+permission-message: "%prefix% &eZakup range VIP+ na &6https://github.com/Symii"
+
+color-reset: "%prefix% &eZresetowałeś swój aktualny kolor"
+color-choose: "%prefix% &eWybrales kolor "
+
+inventory-title: "&e&lWybierz kolor"
+
+green-color-name: "&a&lKolor wiosenna zielen"
+green-color-lore: "&6Bedziesz pisal na &awiosenna zielen"
+
+blue-color-name: "&9&lKolor niebieski"
+blue-color-lore: "&6Bedziesz pisal na &9niebiesko"
+
+cyan-color-name: "&b&lKolor morski blekit"
+cyan-color-lore: "&6Bedziesz pisal na &bmorski blekit"
+
+white-color-name: "&f&lKolor najjasniejszy bialy"
+white-color-lore: "&6Bedziesz pisal na &fbialo"
+
+yellow-color-name: "&e&lKolor jesienna zolc"
+yellow-color-lore: "&6Bedziesz pisal na &ejesienna zolc"
+
+orange-color-name: "&6&lKolor zlocisty"
+orange-color-lore: "&6Bedziesz pisal na &6zlocisto"
+
+gray-color-name: "&8&lKolor mroczny"
+gray-color-lore: "&6Bedziesz pisal na &8mroczno"
+
+purple-color-name: "&5&lKolor buraczkowy"
+purple-color-lore: "&6Bedziesz pisal na &5buraczkowo"
+
+light-gray-color-name: "&7&lKolor sadza angielska"
+light-gray-color-lore: "&6Bedziesz pisal na &7sadza angielska"
+
+reset-color-name: "&cResetuj kolor"
+reset-color-lore: "&eKliknij, aby zresetować kolory"

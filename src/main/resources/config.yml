@@ -1,0 +1,34 @@
+# Should plugin check for updates
+update-checker: true
+
+# This is very helpful for plugin owner
+# when it's set to true to maintain plugin
+plugin-metrics: true
+
+# Set default chat color
+default-chat-color: "&7"
+
+# Inventory click sound
+# 1.8 sound - NOTE_PLING
+# 1.12 sound - BLOCK_NOTE_PLING
+# 1.16 sound - BLOCK_NOTE_BLOCK_PLING
+click-sound: BLOCK_NOTE_BLOCK_PLING
+
+# Select language file from below:
+# en_EN
+# pl_PL
+# Anyway you can edit language files by your self
+language: "en_EN"
+
+# You can translate this for example:
+# green: "THIS:&2:green-color-name" where THIS can be translated
+colors:
+  green: "Green:&2:green-color-name"
+  blue: "Blue:&9:blue-color-name"
+  cyan: "Cyan:&b:cyan-color-name"
+  white: "White:&f:white-color-name"
+  yellow: "Yellow:&e:yellow-color-name"
+  orange: "Orange:&6:orange-color-name"
+  gray: "Gray:&8:gray-color-name"
+  purple: "Purple:&5:purple-color-name"
+  light-gray: "Light gray:&7:light-gray-color-name"

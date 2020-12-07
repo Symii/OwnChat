@@ -1,9 +1,9 @@
 name: OwnChat
 main: me.symi.chat.OwnChat
-version: 0.1
+version: 1.0
 description: This plugin allows players to change their chat message color
+api-version: 1.16
 author: Symi
-api-version: 1.13
 website: https://github.com/Symii
 
 commands:
@@ -13,6 +13,9 @@ commands:
     description: Use this command to change your chat message color
 
 permissions:
-  fabledchat.use:
+  ownchat.use:
     description: Allows cc command
     default: false
+  ownchat.admin:
+    description: Admin permission
+    default: op
