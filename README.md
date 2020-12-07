@@ -27,6 +27,9 @@ Aliases: /chatcolor /color /ownchat /oc
 
 https://github.com/Symii/OwnChat/blob/master/src/main/resources/config.yml
 
-<img src="">
-<img src="">
-<img src="">
+<img src="https://www.spigotmc.org/attachments/desskrpitdsafaf_cos-png.575367/">
+
+<b>Data Collection:</b><br>
+This plugin uses bStats to collect some statistics about usage of the plugin. This can be disabled by changing 'plugin-metrics' in the config.yml to false. The stats available to the public and can be viewed at https://bstats.org/plugin/bukkit/OwnChat/9574
+
+<a href="https://discord.com/invite/pzv9nDbVE7"><img src="https://www.spigotmc.org/attachments/discord_icon_medium-png.575449/"></a>
