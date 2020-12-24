@@ -7,32 +7,53 @@ color-choose: "%prefix% &7You have chosen a color "
 
 inventory-title: "&e&lChoose color"
 
-green-color-name: "&a&lGreen color"
-green-color-lore: "&6You will be writing in &2green color"
+black-color-name: "&0&lBlack color"
+black-color-lore: "&6You will be writing in &0black color"
+
+dark-blue-color-name: "&1&lDark blue color"
+dark-blue-color-lore: "&6You will be writing in &1dark blue color"
+
+dark-green-color-name: "&2&lDark green color"
+dark-green-color-lore: "&6You will be writing in &2dark green color"
+
+dark-aqua-color-name: "&3&lDark aqua color"
+dark-aqua-color-lore: "&6You will be writing in &3dark aqua color"
+
+dark-red-color-name: "&4&lDark red color"
+dark-red-color-lore: "&6You will be writing in &4dark red color"
+
+dark-purple-color-name: "&5&lDark purple color"
+dark-purple-color-lore: "&6You will be writing in &5dark purple color"
+
+gold-color-name: "&6&lGold color"
+gold-color-lore: "&6You will be writing in &6gold color"
+
+gray-color-name: "&7&lGray color"
+gray-color-lore: "&6You will be writing in &7gray color"
+
+dark-gray-color-name: "&8&lDark gray color"
+dark-gray-color-lore: "&6You will be writing in &8dark gray color"
 
 blue-color-name: "&9&lBlue color"
 blue-color-lore: "&6You will be writing in &9blue color"
 
-cyan-color-name: "&b&lCyan color"
-cyan-color-lore: "&6You will be writing in &bcyan color"
+green-color-name: "&a&lGreen color"
+green-color-lore: "&6You will be writing in &agreen color"
 
-white-color-name: "&f&lWhite color"
-white-color-lore: "&6You will be writing in &fwhite color"
+aqua-color-name: "&b&lAqua color"
+aqua-color-lore: "&6You will be writing in &baqua color"
+
+red-color-name: "&c&lRed color"
+red-color-lore: "&6You will be writing in &cred color"
+
+light-purple-color-name: "&d&lLight purple color"
+light-purple-color-lore: "&6You will be writing in &dlight purple color"
 
 yellow-color-name: "&e&lYellow color"
 yellow-color-lore: "&6You will be writing in &eyellow color"
 
-orange-color-name: "&6&lOrange color"
-orange-color-lore: "&6You will be writing in &6orange color"
-
-gray-color-name: "&8&lGray color"
-gray-color-lore: "&6You will be writing in &8gray color"
-
-purple-color-name: "&5&lPurple color"
-purple-color-lore: "&6You will be writing in &5purple color"
-
-light-gray-color-name: "&7&lLight gray color"
-light-gray-color-lore: "&6You will be writing in &7light gray color"
+white-color-name: "&f&lWhite color"
+white-color-lore: "&6You will be writing in &fwhite color"
 
 reset-color-name: "&cReset colors"
 reset-color-lore: "&eClick to reset your chat colors"

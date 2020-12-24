@@ -7,8 +7,6 @@ import org.bukkit.configuration.file.YamlConfiguration;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.Arrays;
-import java.util.List;
 
 public class FileManager {
 
@@ -21,6 +19,7 @@ public class FileManager {
     public FileManager(OwnChat plugin)
     {
         this.plugin = plugin;
+        plugin.saveDefaultConfig();
         createConfigs();
     }
 
@@ -44,15 +43,6 @@ public class FileManager {
             File createdFile = new File(plugin.getDataFolder(), "pl_PL.yml");
             createdFile.renameTo(new File(plugin.getDataFolder() + File.separator + "language" + File.separator + "pl_PL.yml"));
         }
-        pl_PL = new YamlConfiguration();
-        try
-        {
-            pl_PL.load(pl_PL_file);
-        }
-        catch(IOException | InvalidConfigurationException e)
-        {
-            e.printStackTrace();
-        }
 
         en_EN_file = new File(plugin.getDataFolder() + File.separator + "language", "en_EN.yml");
         if(!en_EN_file.exists())
@@ -62,9 +52,13 @@ public class FileManager {
             File createdFile = new File(plugin.getDataFolder(), "en_EN.yml");
             createdFile.renameTo(new File(plugin.getDataFolder() + File.separator + "language" + File.separator + "en_EN.yml"));
         }
+
+        pl_PL = new YamlConfiguration();
         en_EN = new YamlConfiguration();
+
         try
         {
+            pl_PL.load(pl_PL_file);
             en_EN.load(en_EN_file);
         }
         catch(IOException | InvalidConfigurationException e)
@@ -74,14 +68,15 @@ public class FileManager {
 
     }
 
-    public List<FileConfiguration> getConfigurations()
+    public File getFile(String language)
     {
-        return Arrays.asList(en_EN, pl_PL);
-    }
-
-    public List<File> getFiles()
-    {
-        return Arrays.asList(en_EN_file, pl_PL_file);
+        switch(language)
+        {
+            case "pl_PL":
+                return pl_PL_file;
+            default:
+                return en_EN_file;
+        }
     }
 
 }

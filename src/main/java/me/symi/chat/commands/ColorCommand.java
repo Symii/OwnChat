@@ -24,16 +24,16 @@ public class ColorCommand implements CommandExecutor {
 
     public boolean onCommand(CommandSender sender, Command cmd, String s, String[] args) {
         if (!(sender instanceof Player)) {
-            sender.sendMessage(languageManager.getMessage(configManager.getLanguage(), "player-only-command"));
+            sender.sendMessage(languageManager.getMessage("player-only-command"));
             return true;
         }
 
         final Player player = (Player) sender;
 
         if (player.hasPermission("ownchat.use")) {
-            player.openInventory(ChatInventory.getInventory());
+            configManager.openInventory(player);
         } else {
-            player.sendMessage(languageManager.getMessage(configManager.getLanguage(), "permission-message"));
+            player.sendMessage(languageManager.getMessage("permission-message"));
         }
 
         return true;

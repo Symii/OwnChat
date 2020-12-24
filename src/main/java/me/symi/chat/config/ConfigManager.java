@@ -1,19 +1,23 @@
 package me.symi.chat.config;
 
 import me.symi.chat.OwnChat;
+import me.symi.chat.gui.ChatInventory;
 import me.symi.chat.utils.ChatUtil;
 import org.bukkit.Sound;
 import org.bukkit.configuration.file.FileConfiguration;
+import org.bukkit.entity.Player;
+import org.bukkit.inventory.Inventory;
 
 import java.util.HashMap;
 
 public class ConfigManager {
 
-    private OwnChat plugin;
+    private final OwnChat plugin;
     private String default_color, language;
     private boolean update_check, metrics;
-    private HashMap<String, String[]> colors = new HashMap<>();
+    private final HashMap<String, String[]> colors = new HashMap<>();
     private Sound click_sound;
+    private Inventory inventory;
 
     public ConfigManager(OwnChat plugin)
     {
@@ -41,6 +45,7 @@ public class ConfigManager {
             plugin.getLogger().warning("You can change click-sound value in your config.yml file");
         }
 
+        inventory = ChatInventory.getChatInventory();
     }
 
     public boolean isUpdate_check_enabled()
@@ -68,9 +73,8 @@ public class ConfigManager {
         colors.clear();
         for(String cc : plugin.getConfig().getConfigurationSection("colors").getKeys(false))
         {
-            String[] color = ChatUtil.fixColors(plugin.getConfig().getString("colors." + cc)).split(":");
-            String[] array = {color[1], color[2]};
-            colors.put(color[0], array);
+            String[] array = {plugin.getLanguageManager().getMessage(cc + "-color-name"),  plugin.getConfig().getString("colors." + cc + ".color-code")};
+            colors.put(cc, array);
         }
     }
 
@@ -82,6 +86,11 @@ public class ConfigManager {
     public Sound getClick_sound()
     {
         return click_sound;
+    }
+
+    public void openInventory(Player player)
+    {
+        player.openInventory(inventory);
     }
 
 }

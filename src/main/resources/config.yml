@@ -23,12 +23,67 @@ language: "en_EN"
 # You can translate this for example:
 # green: "THIS:&2:green-color-name" where THIS can be translated
 colors:
-  green: "Green:&2:green-color-name"
-  blue: "Blue:&9:blue-color-name"
-  cyan: "Cyan:&b:cyan-color-name"
-  white: "White:&f:white-color-name"
-  yellow: "Yellow:&e:yellow-color-name"
-  orange: "Orange:&6:orange-color-name"
-  gray: "Gray:&8:gray-color-name"
-  purple: "Purple:&5:purple-color-name"
-  light-gray: "Light gray:&7:light-gray-color-name"
+  black:
+    enabled: true
+    color-code: "&0" # 1.16 minecraft version Hex color codes is supported for example - &#000000
+    head-skin-value: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOTY3YTJmMjE4YTZlNmUzOGYyYjU0NWY2YzE3NzMzZjRlZjliYmIyODhlNzU0MDI5NDljMDUyMTg5ZWUifX19"
+  dark-blue:
+    enabled: true
+    color-code: "&1"
+    head-skin-value: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjU2NzYxYjU3MmNmZTIyYmEzNDVkYzdhZDA2NmEwNzliZDQ1YTczNjU1NjdjMjI2MTE0YTY3ZmQ3ZGJhODMifX19"
+  dark-green:
+    enabled: true
+    color-code: "&2"
+    head-skin-value: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMmM5ZTYwMWVkOTE5OGRiYjM0YzUxZGRmMzIzOTI5ZjAxYTVmOTU4YWIxMTEzM2UzZTA0MDdiNjk4MzkzYjNmIn19fQ=="
+  dark-aqua:
+    enabled: true
+    color-code: "&3"
+    head-skin-value: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZGI2Nzc3MmI5M2Q0YWJhMTg5Y2UyYzc4YWE2ZTU0MTgxYWVhMjFmNGI3MmViY2Q5N2Y2MmEzY2Y4N2UwYSJ9fX0="
+  dark-red:
+    enabled: true
+    color-code: "&4"
+    head-skin-value: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjQzOWE3MTk1N2NjMWRkNDU0NmY0MTMyOTY1ZWZmYmUzNDI5Yzg4OWIxYzZiYTcyMTJjYjRiOGMwMzU0MGY4In19fQ=="
+  dark-purple:
+    enabled: true
+    color-code: "&5"
+    head-skin-value: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZjYxN2QxNzEzMmQ5NWIwYjNmOWYyMDdiYTI5NGNlOTNiZDdhMjEwM2QyZmYwNjI5NjYxNmI0YWQxNzhjYyJ9fX0="
+  gold:
+    enabled: true
+    color-code: "&6"
+    head-skin-value: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDM3ZWVmNDQ4NWJlMGE3MjNhNmE5MDkzOWFjYTE1ZmRlZjIzOWI4YTM5MjY1YzdjODgzNTk4ZDM2YWU1In19fQ=="
+  gray:
+    enabled: true
+    color-code: "&7"
+    head-skin-value: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzhlMjk1NzY5OWJjOThhNGI1ZDYzNGFiNzE4NjdlZWIxODZiOTM0YmRiNjVkMmM0YjlkY2MyYjYxM2NmNSJ9fX0="
+  dark-gray:
+    enabled: true
+    color-code: "&8"
+    head-skin-value: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjA4ZjMyMzQ2MmZiNDM0ZTkyOGJkNjcyODYzOGM5NDRlZTNkODEyZTE2MmI5YzZiYTA3MGZjYWM5YmY5In19fQ=="
+  blue:
+    enabled: true
+    color-code: "&9"
+    head-skin-value: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZjgxNTdiNGRjNWVmYzIxNzM1Mjg5NDQ3MWMxMTZkMzlhMDM0ZmMzOTdjMjQ1MzlhOWQwZWViMmE0NjVjYSJ9fX0="
+  green:
+    enabled: true
+    color-code: "&a"
+    head-skin-value: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjJkMTQ1YzkzZTVlYWM0OGE2NjFjNmYyN2ZkYWZmNTkyMmNmNDMzZGQ2MjdiZjIzZWVjMzc4Yjk5NTYxOTcifX19"
+  aqua:
+    enabled: true
+    color-code: "&b"
+    head-skin-value: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODNkMWM0NjM3NTZjYTMzYzlkNmNlYmQyNDIzNzk1ZDhhNGQ4N2U3MTk0YjUwMzU3OWU4ZTExMjI1MTY2ZmUifX19"
+  red:
+    enabled: true
+    color-code: "&c"
+    head-skin-value: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmMyZTk3MmFmYTkxMTViNmQzMjA3NWIxZjFiN2ZlZDdhYTI5YTUzNDFjMTAyNDI4ODM2MWFiZThlNjliNDYifX19"
+  light-purple:
+    enabled: true
+    color-code: "&d"
+    head-skin-value: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMWUzZGNkYmVlYTM1ZjdlY2IxNjY3NGFjNmZmZWQ3OTA2Nzc1MTM5ZTIyYzc4YmY3Mjk1Mzg2ZDMxOTRlOWY2In19fQ=="
+  yellow:
+    enabled: true
+    color-code: "&e"
+    head-skin-value: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzY0MTY4MmY0MzYwNmM1YzlhZDI2YmM3ZWE4YTMwZWU0NzU0N2M5ZGZkM2M2Y2RhNDllMWMxYTI4MTZjZjBiYSJ9fX0="
+  white:
+    enabled: true
+    color-code: "&f"
+    head-skin-value: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvY2UzYWNjNzhiNjI0YzA3MDg0OTE4NGUwYTI2NmQ5ZTk5YWE2NzFmYjNlMzhkNjZjMmMzYzUxOTExOTQ3OTMifX19"

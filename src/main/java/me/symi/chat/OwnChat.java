@@ -36,29 +36,21 @@ public class OwnChat extends JavaPlugin {
     @Override
     public void onEnable()
     {
-        configManager = new ConfigManager(this);
-        database = new SQLite(this);
-        playerDataManager = new PlayerDataManager();
         fileManager = new FileManager(this);
         languageManager = new LanguageManager(this);
         languageManager.loadMessages();
+        configManager = new ConfigManager(this);
+        database = new SQLite(this);
+        playerDataManager = new PlayerDataManager();
 
         PluginManager pluginManager = getServer().getPluginManager();
         pluginManager.registerEvents(new ChatListeners(this), this);
         pluginManager.registerEvents(new JoinListeners(this), this);
+        pluginManager.registerEvents(new InventoryListeners(this), this);
 
-
-        if(VersionUtil.isAPIlevel1_13())
+        if(configManager.isMetrics_enabled())
         {
-            pluginManager.registerEvents(new InventoryListeners(this), this);
-            if(configManager.isMetrics_enabled())
-            {
-                setupMetrics();
-            }
-        }
-        else
-        {
-            pluginManager.registerEvents(new InventoryListeners(this), this);
+            setupMetrics();
         }
 
         if(configManager.isUpdate_check_enabled())

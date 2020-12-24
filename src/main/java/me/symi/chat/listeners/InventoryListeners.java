@@ -16,8 +16,8 @@ import java.util.HashMap;
 public class InventoryListeners implements Listener {
 
     private final OwnChat plugin;
-    private LanguageManager languageManager;
-    private ConfigManager configManager;
+    private final LanguageManager languageManager;
+    private final ConfigManager configManager;
 
     public InventoryListeners(OwnChat plugin)
     {
@@ -34,16 +34,12 @@ public class InventoryListeners implements Listener {
             return;
         }
 
-        if(event.getView().getTitle().equalsIgnoreCase(languageManager.getMessage(configManager.getLanguage(), "inventory-title")))
+        if(event.getView().getTitle().equalsIgnoreCase(languageManager.getMessage("inventory-title")))
         {
             event.setCancelled(true);
             ItemStack current_item = event.getCurrentItem();
-            if(current_item == null || current_item.hasItemMeta() == false)
-            {
-                return;
-            }
-
-            if(!(event.getWhoClicked() instanceof Player))
+            if((!(event.getWhoClicked() instanceof Player)) || current_item == null
+                    || current_item.hasItemMeta() == false)
             {
                 return;
             }
@@ -51,25 +47,25 @@ public class InventoryListeners implements Listener {
             final Player player = (Player) event.getWhoClicked();
             HashMap<String, String[]> colors = configManager.getColors();
 
-            for(String[] array : colors.values())
+            for(String key : colors.keySet())
             {
-                if(current_item.getItemMeta().getDisplayName().equalsIgnoreCase(languageManager.getMessage(configManager.getLanguage(), array[1])))
+                if(current_item.getItemMeta().getDisplayName().equalsIgnoreCase(colors.get(key)[0]))
                 {
-                    ChatColor chatColor = new ChatColor(player, array[0]);
+                    ChatColor chatColor = new ChatColor(player, colors.get(key)[1]);
                     plugin.getPlayerDataManager().addPlayer(player.getName(), chatColor);
-                    player.sendMessage(languageManager.getMessage(configManager.getLanguage(), "color-choose"));
+                    player.sendMessage(languageManager.getMessage("color-choose"));
                     player.closeInventory();
                     player.playSound(player.getLocation(), configManager.getClick_sound(), 1.25f, 0.8f);
                     break;
                 }
             }
 
-            if(event.getSlot() == 17)
+            if(event.getSlot() == 26)
             {
                 ChatColor chatColor = new ChatColor(player, configManager.getDefault_color());
                 plugin.getPlayerDataManager().addPlayer(player.getName(), chatColor);
                 player.playSound(player.getLocation(), configManager.getClick_sound(), 1.25f, 0.8f);
-                player.sendMessage(languageManager.getMessage(configManager.getLanguage(), "color-reset"));
+                player.sendMessage(languageManager.getMessage("color-reset"));
                 player.closeInventory();
             }
 

@@ -3,36 +3,57 @@ player-only-command: "%prefix% &eTa komenda może być używana tylko przez grac
 permission-message: "%prefix% &eZakup range VIP+ na &6https://github.com/Symii"
 
 color-reset: "%prefix% &eZresetowałeś swój aktualny kolor"
-color-choose: "%prefix% &eWybrales kolor "
+color-choose: "%prefix% &eWybrałeś kolor "
 
 inventory-title: "&e&lWybierz kolor"
 
-green-color-name: "&a&lKolor wiosenna zielen"
-green-color-lore: "&6Bedziesz pisal na &awiosenna zielen"
+black-color-name: "&0&lKolor czarny"
+black-color-lore: "&6Będziesz pisał kolorem &0czarnym"
+
+dark-blue-color-name: "&1&lKolor ciemny niebieski"
+dark-blue-color-lore: "&6Będziesz pisał kolorem &1ciemny niebieski"
+
+dark-green-color-name: "&2&lKolor ciemny zielony"
+dark-green-color-lore: "&6Będziesz pisał kolorem &2ciemny zielony"
+
+dark-aqua-color-name: "&3&lKolor ciemny morski"
+dark-aqua-color-lore: "&6Będziesz pisał kolorem &3ciemny morski"
+
+dark-red-color-name: "&4&lKolor ciemny czerwony"
+dark-red-color-lore: "&6Będziesz pisał kolorem &4ciemny czerwony"
+
+dark-purple-color-name: "&5&lKolor ciemny fioletowy"
+dark-purple-color-lore: "&6Będziesz pisał kolorem &5ciemny fioletowy"
+
+gold-color-name: "&6&lKolor złoty"
+gold-color-lore: "&6Będziesz pisał kolorem &6złoty"
+
+gray-color-name: "&7&lKolor szary"
+gray-color-lore: "&6Będziesz pisał kolorem &7szary"
+
+dark-gray-color-name: "&8&lKolor ciemny szary"
+dark-gray-color-lore: "&6Będziesz pisał kolorem &8ciemny szary"
 
 blue-color-name: "&9&lKolor niebieski"
-blue-color-lore: "&6Bedziesz pisal na &9niebiesko"
+blue-color-lore: "&6Będziesz pisał kolorem &9niebieski"
 
-cyan-color-name: "&b&lKolor morski blekit"
-cyan-color-lore: "&6Bedziesz pisal na &bmorski blekit"
+green-color-name: "&a&lKolor zielony"
+green-color-lore: "&6Będziesz pisał kolorem &azielony"
 
-white-color-name: "&f&lKolor najjasniejszy bialy"
-white-color-lore: "&6Bedziesz pisal na &fbialo"
+aqua-color-name: "&b&lKolor morski"
+aqua-color-lore: "&6Będziesz pisał kolorem &bmorski"
 
-yellow-color-name: "&e&lKolor jesienna zolc"
-yellow-color-lore: "&6Bedziesz pisal na &ejesienna zolc"
+red-color-name: "&c&lKolor czerwony"
+red-color-lore: "&6Będziesz pisał kolorem &cczerwony"
 
-orange-color-name: "&6&lKolor zlocisty"
-orange-color-lore: "&6Bedziesz pisal na &6zlocisto"
+light-purple-color-name: "&d&lKolor różowy"
+light-purple-color-lore: "&6Będziesz pisał kolorem &dróżowy"
 
-gray-color-name: "&8&lKolor mroczny"
-gray-color-lore: "&6Bedziesz pisal na &8mroczno"
+yellow-color-name: "&e&lKolor żółty"
+yellow-color-lore: "&6Będziesz pisał kolorem &eżółty"
 
-purple-color-name: "&5&lKolor buraczkowy"
-purple-color-lore: "&6Bedziesz pisal na &5buraczkowo"
+white-color-name: "&f&lKolor biały"
+white-color-lore: "&6Będziesz pisał kolorem &fbiały"
 
-light-gray-color-name: "&7&lKolor sadza angielska"
-light-gray-color-lore: "&6Bedziesz pisal na &7sadza angielska"
-
-reset-color-name: "&cResetuj kolor"
+reset-color-name: "&cZresetuj kolor"
 reset-color-lore: "&eKliknij, aby zresetować kolory"

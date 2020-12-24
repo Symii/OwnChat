@@ -1,6 +1,6 @@
 name: OwnChat
 main: me.symi.chat.OwnChat
-version: 1.1
+version: 1.2
 description: This plugin allows players to change their chat message color
 api-version: 1.16
 author: Symi
